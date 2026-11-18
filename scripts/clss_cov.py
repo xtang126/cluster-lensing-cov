@@ -33,8 +33,11 @@ Usage:
     res.matrix("clss"), res.total()
     res_all = ic.calc_cov(rp_edges, N, cds.cov_sum).merge(he.calc_cov(rp_edges, N, cds.cov_sum), res)
 """
+import os
+import sys
 import numpy as np
 
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from clens.lensing.correlation_functions_3d import CorrelationFunctions3D
 from clens.ying.halostat import HaloStat
 from intrinsic_cov import c_duffy08, CovStackedDeltaSigma

@@ -35,10 +35,12 @@ Usage:
     sr = HODRichness(h=co.h)          # pass wherever clens wants a scaling relation
 """
 import os
+import sys
 import numpy as np
 from scipy.stats import norm, exponnorm
 from scipy.special import gammaln
 
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import clens.util.scaling_relation as _srmod
 
 # ---------------------------------------------------------------------------

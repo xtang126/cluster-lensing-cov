@@ -44,9 +44,12 @@ Usage:
     res = res.merge(HaloEllCov(co, sr, ...).calc_cov(rp_edges, N, cds.cov_sum),
                     CLSSCov(co, sr, ...).calc_cov(rp_edges, N, cds.cov_sum))
 """
+import os
+import sys
 import numpy as np
 from scipy.interpolate import interp1d
 
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import clens.util.constants as cn
 from clens.lensing.correlation_functions_3d import CorrelationFunctions3D
 from clens.ying.DeltaSigmaR import DeltaSigmaR
